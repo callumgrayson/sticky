@@ -3,16 +3,31 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
-body {
-  background: lightgrey;
-}
-
 *:focus {
   outline: none;
 }
 
+body {
+  background: lightgrey;
+}
+
 button, .jot, .jot-content {
   background: lightcyan;
+}
+
+button {
+  border-radius: 2px;
+  font-size: 20px;  
+  cursor: pointer;
+}
+
+button:hover {
+  background: rgb(160, 255, 255);
+}
+
+input:hover, .input:focus {
+  background: rgb(245, 255, 255);
+  outline: solid 1px rgb(160, 255, 255);
 }
 
 #container {
@@ -27,6 +42,18 @@ button, .jot, .jot-content {
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
+}
+
+#search-box {
+  margin-bottom: 10px;
+}
+
+input #search-messages {
+  padding: 3px;
+}
+
+#search-messages-label {
+  margin-right: 15px;
 }
 
 .jot {
@@ -48,7 +75,6 @@ button, .jot, .jot-content {
   border: none;
 }
 
-
 .jot-title {
   width: 100%;
   font-weight: 600;
@@ -61,33 +87,6 @@ button, .jot, .jot-content {
   padding-top: 5px;
   font-size: 13px;
   padding-left: 5px;
-}
-
-button {
-  border-radius: 2px;
-  font-size: 20px;  
-  cursor: pointer;
-}
-
-button:hover {
-  background: rgb(160, 255, 255);
-}
-
-input:hover, .input:focus {
-  background: rgb(245, 255, 255);
-  outline: solid 1px rgb(160, 255, 255);
-}
-
-#search-box {
-  margin-bottom: 10px;
-}
-
-input#search-messages {
-  padding: 3px;
-}
-
-#search-messages-label {
-  margin-right: 15px;
 }
 
 .jot-0 {

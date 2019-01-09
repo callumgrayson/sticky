@@ -1,4 +1,9 @@
+// Gluey Jots
+// Simple notes app with search bar, using local storage
+
+
 function addLoadEvent(func) {
+
   let oldOnload = window.onload;
   if (typeof(oldOnload) !== "function") {
     window.onload = func;
@@ -13,7 +18,7 @@ function addLoadEvent(func) {
 
 function addJot(title, text) {
 
-  // Get elements
+  // Get DOM elements
   let jot = document.getElementsByClassName('jot-0')[0];
   let js = document.getElementById('jot-surface');
   
@@ -40,6 +45,7 @@ function addJot(title, text) {
 
 
 function deleteJot(e) {
+
   let js = document.getElementById('jot-surface');
   let el = e.target.parentNode.parentNode;
   js.removeChild(el);
@@ -49,6 +55,7 @@ function deleteJot(e) {
 
 
 function saveJots() {
+
   // Get elements
   let jots = document.getElementsByClassName('jot');
   let jotsArr = [];
@@ -57,7 +64,6 @@ function saveJots() {
   for (let i = 0; i < jots.length; i++) {
     let title = jots[i].getElementsByClassName('jot-title')[0].firstChild.nodeValue;
     let text = jots[i].getElementsByClassName('jot-content')[0].firstChild.nodeValue;
-    console.log(title, text);
     let jot = {
       "title": title,
       "text": text
@@ -82,6 +88,8 @@ function fetchJots() {
   for (let i = 0; i < jots.length; i++) {
     let title = jots[i].title;
     let text = jots[i].text;
+
+    // Modest throttle so users can see updating
     setTimeout(() => {
       addJot(title, text);      
     }, i * jotInt);
@@ -89,15 +97,20 @@ function fetchJots() {
 }
 
 function searchMessages(term) {
+
   let str = term.value.toUpperCase();
 
   // Get messages as array
   let jots = document.getElementsByClassName('jot-title');
   let ja = "";
+
+  // Check each title against search term
   for (let k = 0; k < jots.length; k++) {
     ja = jots[k].firstChild.nodeValue;
     let strClean = ja.replace(/[^0-9a-zA-Z\xC0-\xFF \-]/g, '').toUpperCase();
     let condition = strClean.indexOf(str) > -1;
+
+    // Display or not
     if (!condition) {
       jots[k].parentNode.parentNode.style.display = 'none';
     } else {
@@ -108,7 +121,6 @@ function searchMessages(term) {
 
 
 // Event Listeners
-// Add new jot Click
 function addNewJotListener() {
   let addBtn = document.getElementById('add-jot');
   addBtn.addEventListener('click', addJot);
