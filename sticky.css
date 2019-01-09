@@ -1,0 +1,95 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: lightgrey;
+}
+
+*:focus {
+  outline: none;
+}
+
+button, .jot, .jot-content {
+  background: lightcyan;
+}
+
+#container {
+  width: auto;
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  background: lightgray;
+}
+
+#option-bar {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.jot {
+  border: solid 5px inherit;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px grey ;
+  padding: 0 8px 8px 8px;
+  margin-bottom: 10px;
+}
+
+.jot-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.jot-delete {
+  float: right;
+  font-size: 22px;
+  border: none;
+}
+
+
+.jot-title {
+  width: 100%;
+  font-weight: 600;
+  font-size: 16px;
+  margin: 5px;
+}
+
+.jot-content {
+  width: 100%;
+  padding-top: 5px;
+  font-size: 13px;
+  padding-left: 5px;
+}
+
+button {
+  border-radius: 2px;
+  font-size: 20px;  
+  cursor: pointer;
+}
+
+button:hover {
+  background: rgb(160, 255, 255);
+}
+
+input:hover, .input:focus {
+  background: rgb(245, 255, 255);
+  outline: solid 1px rgb(160, 255, 255);
+}
+
+#search-box {
+  margin-bottom: 10px;
+}
+
+input#search-messages {
+  padding: 3px;
+}
+
+#search-messages-label {
+  margin-right: 15px;
+}
+
+.jot-0 {
+  display: none;
+}
