@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="./main.min.css">
+  <script src="./app.min.js" defer></script>
+  <title>Gluey Jots</title>
+</head>
+<body>
+  <div id="container">
+    <div id="top">
+      <h1>Gluey Jots</h1>
+      <p id="instructions"></p>
+    </div>
+    <div id="search-box">
+      <label for="search-messages" id="search-messages-label">Search jots by title </label>
+      <input type="text" name="search-messages" id="search-messages" placeholder="search...">
+    </div>
+    <div id="jot-area">
+      <div id="option-bar">
+        <button id="add-jot">+ Add new jot</button>
+        <button id="jot-save">Save all jots</button>
+      </div>
+      <div id="jot-surface">       
+        <div class="jot-0">
+          <div class="jot-container-bar"></div>
+          <div class="jot-header" >
+            <div type="text" name="jot-title" class="jot-title input"  contenteditable="true">title</div>
+            <button class="jot-delete">&times;</button>
+          </div>
+          <div name="content" class="jot-content input" contenteditable="true">...</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
