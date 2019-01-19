@@ -16,7 +16,7 @@ In **`src`** open **`index.html`** with your editor's live server to see 'change
 
 ## Build
 - Run **`gulp`** in your terminal. Gulp will transpile, autoprefix and minify your css and javascript files in the **`docs`** folder.
-- In the **`docs`** folder, in **`index.html`** add **`.min`** to both files: 
+- In the **`docs`** folder, in **`index.html`** add **`.min`** to both tags: 
 ```html
 <link rel="stylesheet" href="./main.min.css">
 <script src="./app.min.js"></script>
